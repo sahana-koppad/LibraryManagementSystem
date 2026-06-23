@@ -1,0 +1,77 @@
+/* ===== Design tokens ===== */
+:root {
+  /* Color palette - "reading room" theme */
+  --color-ink: #1F2937;          /* deep ink navy - headers, primary text */
+  --color-ink-light: #374151;
+  --color-paper: #FAF7F2;        /* warm paper cream - page background */
+  --color-paper-card: #FFFFFF;   /* card surfaces */
+  --color-paper-muted: #F1EDE5;  /* subtle section backgrounds */
+  --color-amber: #B8743A;        /* muted amber accent */
+  --color-amber-light: #F4E9DD;
+  --color-border: #E5E0D5;
+  --color-text-secondary: #6B7280;
+  --color-text-tertiary: #9CA3AF;
+  --color-success: #4D7C5F;
+  --color-success-bg: #E8F0EA;
+  --color-danger: #B0463F;
+  --color-danger-bg: #FAEAE8;
+
+  /* Typography */
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --sidebar-width: 240px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Focus visibility for accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
